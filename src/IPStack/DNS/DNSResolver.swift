@@ -19,7 +19,7 @@ open class UDPDNSResolver: DNSResolverProtocol, NWUDPSocketDelegate {
         socket.delegate = self
     }
 
-    public func resolve(session: DNSSession) {
+    open func resolve(session: DNSSession) {
         socket.write(data: session.requestMessage.payload)
     }
 
